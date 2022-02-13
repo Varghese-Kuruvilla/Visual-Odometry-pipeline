@@ -107,6 +107,7 @@ pip3 install -r requirements.txt
 ```
 
 ## Usage
+### Running the VO code
 - The current version of the code requires the RGB images and the corresponding depth images stored in a single folder in the following manner:
   - 000000_depth.npy 
   - 000000.png
@@ -118,11 +119,16 @@ pip3 install -r requirements.txt
 ```
 vo_method: "rgbd" #Choose from monocular or rgbd. The monocular method is work in progress, rgbd is stable
 feature_extractor: "r2d2" #Choose from sift, orb, r2d2
-feature_matcher: "ratio_mutual_nn_matcher" #Choose from mnn_matcher, similarity_matcher, ratio_mutual_nn_matcher
+
+#For offline mode
+#The code for realtime VO using a depth camera will be shortly added
 #Folder containing the rgb images: should be of the form *.png
+
 image_path: "/media/artpark/ELIZABETH/VO/data/03/image_2/"
+
 #Camera intrinsic matrix of the form [fx,0,cx,0,fy,cy,0,0,1]
 #For Kitti
+
 camera_intrinsic_matrix:
   - 721.53 
   - 0.0 
@@ -134,13 +140,31 @@ camera_intrinsic_matrix:
   - 0.0 
   - 1.0
 
+output_filename: ../global_poses #Saved as a .npy file
 visualize_results: True #Visualize the extracted features and the matches between the images
+
+##Parameters for plotting and evaluating the ATE, RPE
+#GT should be in the KITTI ground truth format
+
+gt_txt_file_path : "../plot_utils/data/03.txt"
+#The poses file is automatically generated on running vo_runner.py
+poses_file_path : "../plot_utils/data/global_poses.npy"
 ```
 
 - The VO pipeline can be run from the vo_runner python script:
 ```
 python3 vo_runner.py
 ```
+### Plotting the trajectories and computing the absolute translational error(ATE) and relative position error(RPE)
+- Run the script plot_traj.py(in plot_utils) to plot the ground truth and position of the vehicle as estimated by visual odometry
+```
+python3 plot_traj.py
+```
+- Run the script prepare_data.py(in plot_utils) to prepare the data for estimating the ATE and the RPE.
+```
+python3 prepare_data.py
+```
+- Run the script kittievalodom.py to estimate both the ATE and the RPE
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -174,7 +198,7 @@ Project Link: [https://github.com/Varghese-Kuruvilla/Visual_Odometry](https://gi
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
+[contributors-url]: https://github.com/ShrutheeshIR
 [forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
 [forks-url]: https://github.com/github_username/repo_name/network/members
 [stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge

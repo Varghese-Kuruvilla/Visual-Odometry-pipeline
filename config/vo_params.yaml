@@ -17,11 +17,11 @@ camera_intrinsic_matrix:
   - 0.0 
   - 1.0
 
-output_filename: global_poses
+output_filename: ../global_poses #Saved as a .npy file
 visualize_results: True #Visualize the extracted features and the matches between the images
 ##Parameters for plotting and evaluating the ATE, RPE
 #GT should be in the KITTI ground truth format
-gt_txt_file_path : "/home/artpark/UGV/VO/Visual_Odometry_git/Visual_Odometry/plot_utils/data/03.txt"
+gt_txt_file_path : "../plot_utils/data/03.txt"
 #The poses file is automatically generated on running vo_runner.py
-poses_file_path : "/home/artpark/UGV/VO/Visual_Odometry_git/Visual_Odometry/plot_utils/data/global_poses.npy"
+poses_file_path : "../plot_utils/data/global_poses.npy"
   
