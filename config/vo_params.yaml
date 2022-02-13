@@ -3,7 +3,7 @@ feature_extractor: "r2d2" #Choose from sift, orb, r2d2
 #For offline mode
 #The code for realtime VO using a depth camera will be shortly added
 #Folder containing the rgb images: should be of the form *.png
-image_path: "/media/artpark/ELIZABETH/VO/data/03/image_2/"
+image_path: ""
 #Camera intrinsic matrix of the form [fx,0,cx,0,fy,cy,0,0,1]
 #For Kitti
 camera_intrinsic_matrix:

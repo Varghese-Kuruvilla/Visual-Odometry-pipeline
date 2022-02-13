@@ -17,12 +17,12 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][contributors-url]
+<!-- [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+[![LinkedIn][linkedin-shield]][linkedin-url] -->
 
 
 
@@ -36,14 +36,12 @@
   <p align="center">
     Provides a basic visual odometry pipeline (feature extraction, feature matching, motion estimation) with several configurable options. 
     <br />
-    <a href="https://github.com/Varghese-Kuruvilla/Visual_Odometry"><strong>Explore the docs »</strong></a>
+    <a href=""><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/Varghese-Kuruvilla/Visual_Odometry">View Demo</a>
+    <a href="https://github.com/Varghese-Kuruvilla/Visual-Odometry-pipeline/issues">Report Bug</a>
     ·
-    <a href="https://github.com/Varghese-Kuruvilla/Visual_Odometry/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/Varghese-Kuruvilla/Visual_Odometry/issues">Request Feature</a>
+    <a href="https://github.com/Varghese-Kuruvilla/Visual-Odometry-pipeline/issues">Request Feature</a>
   </p>
 
 </div>
@@ -101,6 +99,11 @@ This project follows a basic visual odometry pipeline, which consists of the fol
 <!--GETTING STARTED -->
 ## Getting Started
 ## Installation
+Clone the repository
+```
+git clone https://github.com/Varghese-Kuruvilla/Visual-Odometry-pipeline.git
+```
+
 The packages required for getting started can be installed from the requirements file.
 ```
 pip3 install -r requirements.txt
@@ -170,14 +173,33 @@ python3 prepare_data.py
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+<!--ROADMAP -->
+## Roadmap
+- [x] Add offline stereo visual odometry
+- [x] Add scripts for plotting trajectories
+- [x] Add scripts for error computation
+- [] Add realtime stereo visual odometry
+- [] Add monocular visual odometry
+
+<!--CONTRIBUTING-->
+## Contributing
+Any contributions to this project are encouraged and are greatly appreciated.
+If you have a suggestion that would improve the project, please fork the project and create a pull request. You can also open as issue.
+Don't forget to give the project a star! Thanks!
+
+11. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 <!-- CONTACT -->
 ## Contact
-- Shrutheesh Raman - shrutheesh99@gmail.com
-- Varghese Kuruvilla  - vkuruvilla789@gmail.com
+- Shrutheesh Raman - shrutheesh99@gmail.com (https://github.com/ShrutheeshIR)
+- Varghese Kuruvilla  - vkuruvilla789@gmail.com (https://github.com/Varghese-Kuruvilla)
 
 
-Project Link: [https://github.com/Varghese-Kuruvilla/Visual_Odometry](https://github.com/Varghese-Kuruvilla/Visual_Odometry)
+Project Link: [Project Link](https://github.com/Varghese-Kuruvilla/Visual-Odometry-pipeline)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -197,8 +219,8 @@ Project Link: [https://github.com/Varghese-Kuruvilla/Visual_Odometry](https://gi
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/ShrutheeshIR
+<!-- [contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
+[contributors-url]: https://github.com/Varghese-Kuruvilla/Visual-Odometry-pipeline/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
 [forks-url]: https://github.com/github_username/repo_name/network/members
 [stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
@@ -209,4 +231,4 @@ Project Link: [https://github.com/Varghese-Kuruvilla/Visual_Odometry](https://gi
 [license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: images/screenshot.png -->
