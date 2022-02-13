@@ -36,8 +36,8 @@
   <p align="center">
     Provides a basic visual odometry pipeline (feature extraction, feature matching, motion estimation) with several configurable options. 
     <br />
-    <a href=""><strong>Explore the docs »</strong></a>
-    <br />
+    <!-- <a href=""><strong>Explore the docs »</strong></a> -->
+    <!-- <br /> -->
     <br />
     <a href="https://github.com/Varghese-Kuruvilla/Visual-Odometry-pipeline/issues">Report Bug</a>
     ·
@@ -127,7 +127,7 @@ feature_extractor: "r2d2" #Choose from sift, orb, r2d2
 #The code for realtime VO using a depth camera will be shortly added
 #Folder containing the rgb images: should be of the form *.png
 
-image_path: "/media/artpark/ELIZABETH/VO/data/03/image_2/"
+image_path: ""
 
 #Camera intrinsic matrix of the form [fx,0,cx,0,fy,cy,0,0,1]
 #For Kitti
@@ -178,8 +178,8 @@ python3 prepare_data.py
 - [x] Add offline stereo visual odometry
 - [x] Add scripts for plotting trajectories
 - [x] Add scripts for error computation
-- [] Add realtime stereo visual odometry
-- [] Add monocular visual odometry
+- [ ] Add realtime stereo visual odometry
+- [ ] Add monocular visual odometry
 
 <!--CONTRIBUTING-->
 ## Contributing
@@ -209,9 +209,9 @@ Project Link: [Project Link](https://github.com/Varghese-Kuruvilla/Visual-Odomet
 
 ## Acknowledgments
 
-* []()
-* []()
-* []()
+* [R2D2 Naver labs](https://github.com/naver/r2d2)
+* [David Scaramuzza visual odometry tutorial](https://rpg.ifi.uzh.ch/docs/Visual_Odometry_Tutorial.pdf)
+* [Github Readme template](https://github.com/othneildrew/Best-README-Template)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
