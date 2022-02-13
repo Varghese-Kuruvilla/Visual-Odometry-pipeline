@@ -1,0 +1,8 @@
+INFO evaluate.py(190): 
+
+INFO evaluate.py(191): ================================================================================
+INFO evaluate.py(192): evaluating the model ...
+
+INFO evaluate.py(193): setup and restore model
+INFO evaluate.py(219): compute the mIOU
+INFO evaluate.py(223): mIOU is: 0.000000

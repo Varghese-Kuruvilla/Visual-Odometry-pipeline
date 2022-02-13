@@ -1,0 +1,49 @@
+
+error when I ran train.py
+
+CUDA_VISIBLE_DEVICES=0 sudo python3 -m torch.distributed.launch --nproc_per_node=2 train.py
+[sudo] password for smart: 
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+{0: 'unlabeled', 1: 'ego vehicle', 2: 'rectification border', 3: 'out of roi', 4: 'static', 5: 'dynamic', 6: 'ground', 7: 'road', 8: 'sidewalk', 9: 'parking', 10: 'rail track', 11: 'building', 12: 'wall', 13: 'fence', 255: 'guard rail', 15: 'bridge', 16: 'tunnel', 17: 'pole', 18: 'polegroup', 19: 'traffic light', 20: 'traffic sign', 21: 'vegetation', 22: 'terrain', 23: 'sky', 24: 'person', 25: 'rider', 26: 'car', 27: 'truck', 28: 'bus', 29: 'caravan', 30: 'trailer', 31: 'train', 32: 'motorcycle', 33: 'bicycle', -1: 'license plate'}
+THCudaCheck FAIL file=/pytorch/torch/csrc/cuda/Module.cpp line=37 error=10 : invalid device ordinal
+Traceback (most recent call last):
+  File "train.py", line 180, in <module>
+    train()
+  File "train.py", line 44, in train
+    torch.cuda.set_device(args.local_rank)
+  File "/usr/local/lib/python3.6/dist-packages/torch/cuda/__init__.py", line 281, in set_device
+    torch._C._cuda_setDevice(device)
+RuntimeError: cuda runtime error (10) : invalid device ordinal at /pytorch/torch/csrc/cuda/Module.cpp:37
+Traceback (most recent call last):
+  File "train.py", line 180, in <module>
+    train()
+  File "train.py", line 127, in train
+    loss2 = Loss2(out16, lb)
+  File "/usr/local/lib/python3.6/dist-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "./loss.py", line 23, in forward
+    loss, _ = torch.sort(loss, descending=True)
+RuntimeError: merge_sort: failed to synchronize: an illegal memory access was encountered
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  NCCL error in: /pytorch/torch/lib/c10d/../c10d/NCCLUtils.hpp:29, unhandled cuda error
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/usr/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/usr/local/lib/python3.6/dist-packages/torch/distributed/launch.py", line 246, in <module>
+    main()
+  File "/usr/local/lib/python3.6/dist-packages/torch/distributed/launch.py", line 242, in main
+    cmd=cmd)
+subprocess.CalledProcessError: Command '['/usr/bin/python3', '-u', 'train.py', '--local_rank=1']' died with <Signals.SIGABRT: 6>.
+
+
+Last time I got a different channel error ,now I got this.
+
+
+
+
+
+

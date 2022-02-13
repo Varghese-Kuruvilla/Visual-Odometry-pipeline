@@ -1,0 +1,8 @@
+INFO evaluate.py(189): 
+
+INFO evaluate.py(190): ================================================================================
+INFO evaluate.py(191): evaluating the model ...
+
+INFO evaluate.py(192): setup and restore model
+INFO evaluate.py(218): compute the mIOU
+INFO evaluate.py(222): mIOU is: nan
