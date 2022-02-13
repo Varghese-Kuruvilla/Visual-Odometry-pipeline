@@ -12,23 +12,12 @@ import logging
 import skimage.exposure
 logger = logging.getLogger('module_stereo_runner')
 logger.setLevel(logging.INFO)
+from Utils.debug_utils import *
 
 
 midpoints = [(100,100)] #VO can also be used for tracking an arbitrary point in the scene. For example it can be used for 
 #tracking a point on the road for parking an autonomous vehicle
 numpyseeds = [8214]
-
-#For debug
-def breakpoint():
-  inp = input("Waiting for input")
-
-
-def display_image(name,frame):
-  cv2.namedWindow(name,cv2.WINDOW_NORMAL)
-  cv2.imshow(name,frame)
-  if cv2.waitKey(1) & 0xFF == ord('q'):
-    cv2.destroyAllWindows()
-    sys.exit()
 
 
 for numpyseed in numpyseeds:

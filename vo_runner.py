@@ -1,9 +1,7 @@
 import yaml
 import vo_stereo_runner
 import numpy as np
-#For debug
-def breakpoint():
-    inp = input("Waiting for input...")
+from Utils.debug_utils import *
 
 def read_yaml_file():
     #Reads parameters from the yaml file

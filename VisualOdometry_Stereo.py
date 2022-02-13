@@ -28,21 +28,9 @@ from Utils.frame_utils import *
 from Utils.park_utils import *
 from Utils.geom_utils import *
 from Utils.SE3_utils import SE3
+from Utils.debug_utils import *
 
 listlength = 1
-
-#Breakpoint
-def breakpoint():
-    inp = input("Waiting for input...")
-
-#Display image
-def display_image(winname,frame):
-    cv2.namedWindow(winname,cv2.WINDOW_NORMAL)
-    cv2.imshow(winname,frame)
-    key = cv2.waitKey(1)
-    if key & 0xFF == ord('q'):
-        cv2.destroyAllWindows()
-        sys.exit()
 
 def append_to_list(l, ele, listlen= listlength):
     l.append(ele)

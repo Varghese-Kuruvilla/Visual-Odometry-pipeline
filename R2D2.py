@@ -24,10 +24,7 @@ import logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger('module_R2D2')
 logger.setLevel(logging.INFO)
-
-#For debug
-def breakpoint():
-    inp = input("Waiting for input...")
+from Utils.debug_utils import *
 
 def mnn_matcher(descriptors_a, descriptors_b, threshold = 0.9):
     device = descriptors_a.device
