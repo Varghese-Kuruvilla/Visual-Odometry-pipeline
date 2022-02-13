@@ -193,6 +193,9 @@ Don't forget to give the project a star! Thanks!
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
+<!--LICENSE-->
+Distributed under the MIT License. See ```License``` for more information.
+
 <!-- CONTACT -->
 ## Contact
 - Shrutheesh Raman - shrutheesh99@gmail.com (https://github.com/ShrutheeshIR)
